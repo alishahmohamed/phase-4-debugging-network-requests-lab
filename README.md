@@ -1,11 +1,9 @@
-# Putting it All Together: Client-Server Communication
+# Debugging Network Requests Lab
 
 ## Learning Goals
 
-- Understand how to communicate between client and server using fetch, and how
-  the server will process the request based on the URL, HTTP verb, and request
-  body
-- Debug common problems that occur as part of the request-response cycle
+- Use the browser developer tools to debug on the frontend
+- Use server logging tools and `byebug` to isolate errors on the backend
 
 ## Introduction
 
@@ -15,26 +13,26 @@ find and fix the errors!
 
 To get the backend set up, run:
 
-```console
-$ bundle install
-$ rails db:migrate db:seed
-$ rails s
+```sh
+bundle install
+rails db:migrate db:seed
+rails s
 ```
 
 Then, in a new terminal, run the frontend:
 
-```console
-$ npm install --prefix client
-$ npm start --prefix client
+```sh
+npm install --prefix client
+npm start --prefix client
 ```
 
-Confirm both applications are up and running by visiting
+Confirm both applications are both up and running by visiting
 [`localhost:4000`](http://localhost:4000) and viewing the list of toys in your
 React application.
 
 ## Deliverables
 
-In this application, we have the following features:
+In this application, the features we have are to:
 
 - Display a list of all the toys
 - Add a new toy when the toy form is submitted
@@ -52,22 +50,3 @@ browser and using the Rails server logs and `byebug`.
 
 **Note**: You shouldn't need to modify any of the React code to get the
 application working. You should only need to change the code for the Rails API.
-
-As you work on debugging these issues, use the space in this README file to take
-notes about your debugging process. Being a strong debugger is all about
-developing a process, and it's helpful to document your steps as part of
-developing your own process.
-
-## Your Notes Here
-
-- Add a new toy when the toy form is submitted
-
-  - How I debugged:
-
-- Update the number of likes for a toy
-
-  - How I debugged:
-
-- Donate a toy to Goodwill (and delete it from our database)
-
-  - How I debugged:
